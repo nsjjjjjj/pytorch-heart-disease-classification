@@ -1,0 +1,105 @@
+{
+  "dataset": {
+    "kaggle_reference": "https://www.kaggle.com/datasets/hartman/heart-disease-uci",
+    "source": "https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.cleveland.data",
+    "loaded_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/heart.csv",
+    "rows": 303,
+    "features": 13,
+    "raw_missing_values_before_fill": {
+      "age": 0,
+      "sex": 0,
+      "cp": 0,
+      "trestbps": 0,
+      "chol": 0,
+      "fbs": 0,
+      "restecg": 0,
+      "thalach": 0,
+      "exang": 0,
+      "oldpeak": 0,
+      "slope": 0,
+      "ca": 4,
+      "thal": 2,
+      "target": 0
+    },
+    "missing_values_before_fill": {
+      "age": 0,
+      "sex": 0,
+      "cp": 0,
+      "trestbps": 0,
+      "chol": 0,
+      "fbs": 0,
+      "restecg": 0,
+      "thalach": 0,
+      "exang": 0,
+      "oldpeak": 0,
+      "slope": 0,
+      "ca": 0,
+      "thal": 0,
+      "target": 0
+    },
+    "train_rows": 212,
+    "valid_rows": 45,
+    "test_rows": 46,
+    "target_counts": {
+      "0": 164,
+      "1": 139
+    }
+  },
+  "model": {
+    "structure": "13 -> 32 -> Dropout(0.25) -> 16 -> 1 -> Sigmoid",
+    "loss_function": "nn.BCELoss",
+    "optimizer": "Adam(lr=0.001)"
+  },
+  "before_training": {
+    "loss": 0.6999753713607788,
+    "accuracy": 0.4782608695652174,
+    "precision": 0.42857142857142855,
+    "recall": 0.42857142857142855,
+    "f1": 0.42857142857142855,
+    "confusion_matrix": {
+      "tn": 13,
+      "fp": 12,
+      "fn": 12,
+      "tp": 9
+    }
+  },
+  "after_training": {
+    "loss": 0.4386303126811981,
+    "accuracy": 0.8043478260869565,
+    "precision": 0.8,
+    "recall": 0.7619047619047619,
+    "f1": 0.7804878048780488,
+    "confusion_matrix": {
+      "tn": 21,
+      "fp": 4,
+      "fn": 5,
+      "tp": 16
+    }
+  },
+  "training": {
+    "epochs_used": 141,
+    "best_valid_loss": 0.43646040558815,
+    "final_train_loss": 0.29184862971305847,
+    "final_valid_loss": 0.45749393105506897
+  },
+  "artifacts": {
+    "raw_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/heart_disease_raw.csv",
+    "heart_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/heart.csv",
+    "clean_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/heart_clean.csv",
+    "raw_missing_report": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/raw_missing_report.csv",
+    "missing_report": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/missing_report.csv",
+    "train_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/train.csv",
+    "valid_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/valid.csv",
+    "test_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/test.csv",
+    "normalized_train_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/normalized_train.csv",
+    "normalized_valid_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/normalized_valid.csv",
+    "normalized_test_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/normalized_test.csv",
+    "normalization_info_csv": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/data/normalization_info.csv",
+    "model": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/outputs/heart_disease_model.pth",
+    "class_distribution": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/outputs/class_distribution.png",
+    "correlation_heatmap": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/outputs/correlation_heatmap.png",
+    "loss_curve": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/outputs/loss_curve.png",
+    "valid_metrics_curve": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/outputs/valid_metrics_curve.png",
+    "before_after_metrics": "/Users/noseongjun/Documents/GitHub/heart-disease-classification/outputs/before_after_metrics.png"
+  }
+}
